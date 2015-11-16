@@ -1,0 +1,46 @@
+{
+  "name": "voffice",
+  "version": "1.0.0",
+  "description": "voffice is an application to help people increase productivity.",
+  "main": "index.js",
+  "author": "Linh Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "latest",
+    "bluebird": "^3.0.5",
+    "body-parser": "latest",
+    "cookie-parser": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "jsonwebtoken": "latest",
+    "method-override": "latest",
+    "mongoose": "latest",
+    "mongoose-lifecycle": "latest",
+    "morgan": "latest",
+    "passport": "latest",
+    "passport-http-bearer": "latest",
+    "passport-local": "latest"
+  },
+  "devDependencies": {
+    "bower": "^1.6.3",
+    "chai": "^3.4.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express": "^1.4.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.5",
+    "karma-junit-reporter": "^0.2.2"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1",
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js"
+  }
+}

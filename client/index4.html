@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>vOffice - easy way to improve your productivity</title>
+    <meta name="description" content="Virtual office for everyone"/>
+    <meta name="keywords" content="Virtual office, todo-list, van phong ao"/>
+
+    <!--CSS - Website-->
+    <link rel="stylesheet" href="css/app.css"/>
+    <!--CSS - Components-->
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css"/>
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="top-nav" class="at-top">
+        <div class="navbar navbar-default border-bottom" id="main-nav" role="navigation">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="/" target="_self" id="logo">
+                            <img src="images/logo-330.png" class="header-logo ng-scope">
+                            <span class="company-name">vOffice</span>
+                        </a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#top-menu">
+                            <span class="sr-only">Toggle navigation</span>
+
+                            <div class="menu-icons clearfix">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="top-menu" style="padding: 0">
+                        <ul class="nav navbar-nav" id="search-form-header">
+                            <li ng-class="{'active':(widgetName=='/overview.html')}">
+                            <a href="/overview.html" target="_self">OVERVIEW</a>
+                            </li>
+
+                        </ul>
+                        <ul class="top-right-nav pull-right">
+                            <li class="sign-in" ng-if="!isAuthenticated">
+                                <a href="/login.html" target="_self">Log in</a>
+                            </li>
+                            <li class="sign-up" ng-if="!isAuthenticated">
+                                <a href="/register.html" target="_self">Register</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        content
+    </div>
+
+    <footer>
+        <div class="container">
+
+            <ul class="footer-menu pull-left" style="padding: 0px;margin-left: 40px;">
+                <li class="active">
+                    <a href="/company.html" target="_self">Company</a>
+                </li>
+                <li>
+                    <a href="/contact.html" target="_self">Contact</a>
+                </li>
+
+                <li>
+                    <a href="/fees.html" target="_self">Fees</a>
+                </li>
+                <li>
+                    <a href="/legal.html" target="_self">Legal</a>
+                </li>
+
+            </ul>
+
+            <div class="social-icons pull-right">
+                <a class="facebook" href="https://www.facebook.com/calalia" target="_blank" title="Calalia">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="google+" href="//google.com/+Calalia" rel="publisher" title="Google+" target="_blank">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.btn-login {
+    background-color: transparent;
+    color: #000000;
+    border-width: 2px;
+
+}
+
+.btn-login:hover {
+    /*background-color: red;*/
+    border-width: 2px;
+    border-color: #3ac60a;
+    background-color: transparent;
+
+}
+
+.btn-register {
+    background-color: forestgreen;
+    border-width: 2px;
+    color: #ffffff;
+    border-color: forestgreen;
+}
+
+.btn-register:hover {
+    border-color: #3ac60a;
+    border-width: 2px;
+    background-color: forestgreen;
+    color: #ffffff;
+
+}
+
+/*Office container*/
+
+.web-container {
+    top: 100px;
+
+}

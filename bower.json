@@ -1,0 +1,31 @@
+{
+  "name": "voffice",
+  "description": "voffice is an application to help people increase productivity.",
+  "main": "index.js",
+  "authors": [
+    "Linh Nguyen"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "http://www.voffice.online",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "client/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-animate": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "angular-ui-router": "latest",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0",
+    "angular-cookies": "~1.4.7"
+  }
+}

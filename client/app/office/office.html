@@ -1,0 +1,32 @@
+<div id="sidebar-wrapper">
+    <div id="nav-toggle" nav-toggle>
+        <i class="fa fa-caret-left"></i>
+        <i class="fa fa-caret-right"></i>
+    </div>
+
+    <div id="mainsection" ng-controller="sidebarController">
+        <section ng-repeat="item in items" id="item.name" ng-class="{active:item.active}">
+            <h3 ng-click="item.active=!item.active"
+                ng-class="isActive(item)">
+                <i class="{{item.icon}}"></i>
+                <a ui-sref="{{item.url}}" class="menu-item">{{item.name}}</a>
+            </h3>
+
+            <div class="section-body">
+                <ul>
+                    <li ng-repeat="submenu in item.submenus" ng-class="currentPage(submenu)">
+                        <a href="#/{{submenu.url}}">
+                            <i class="{{submenu.icon}}"></i>
+                            <span>{{submenu.name}}</span>
+                            <span ng-if="(submenu.notifier)" class="badge pull-right">{{submenu.notifier}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div> <!-- End SideBar -->
+
+<div id="page-content">
+    <div ui-view></div>
+</div>

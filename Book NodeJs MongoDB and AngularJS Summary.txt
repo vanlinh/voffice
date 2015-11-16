@@ -1,0 +1,146 @@
+Reading configuration: {Single Page, Smallest font size}
+
+Chapter 2: JavaScript Primer
+
+2.1 Function can be a parameter.
+2.2 Page 67 - Anonymous functions: Function is defined directly in the parameter sets when you call other functions.
+    Example: function doCalc(num1, num2, calcFunction){
+                    return calcFunction(num1, num2);
+                }
+             function addFunc(n1,n2){
+                return n1 + n2;
+             }
+             Then:
+
+                doCalc(5,10,addFunc);
+
+                or
+
+                doCalc(5,10, function(n1,n2){ return n1 + n2}); (????)
+
+2.3 Object --> access the properties of object when the name of property includes un-support characters --> object.["properties name"]
+
+2.4 Prototyping Object Pattern (page 71)
+    The functions defined in prototype are created only once, when the JS is loaded, instead of each time a new object is created.
+
+            function UserP(first, last){
+              this.first = first;
+              this.last = last;
+            }
+            UserP.prototype = {
+              getFullName: function(){
+                  return this.first + " " + this.last;
+                }
+            };”
+2.5 String & Array manipulation
+
+Chapter 3: NodeJS - How Node.js works with Events, Listeners, Timers, and Callbacks
+
+3.1 Event Model
+
+3.2 Event Callbacks vs Threaded Models
+
+3.3 Blocking I/O --> Thread Pool
+
+3.4 Timers: timeout, interval, and immediate timers
+    - Timeout is used to delay work for a specific amount of time. When that time expires, the callback function is executed, and the timer goes away.
+            setTimeout(callback, delayMilliSeconds, [args]);
+
+        Cancel timeout function with
+            clearTimeout(myTimeoutId); (id return from create timeout: setTimeout(callback, delay))
+
+    - Interval
+
+        setInterval(callback, delayMilliSeconds, [args]);
+        clearInterval(myIntervalId);
+
+    - Immediate Timer: use to yield long-running execution segments to other callbacks to prevent starving the I/O events.
+
+        setImmediate(callback,[args]);
+        clearImmediate(myImmediateId);
+
+    - nextTick to schedule work ????
+
+    - Event Emitters and Listeners ????
+
+    -- Add custom event to JS object
+    -- Add Event listeners to object
+
+    - Callbacks ????
+
+Chapter 4 I/O
+
+    * JSON
+
+    -- Convert JSON to JS Objects: JSON.parse(JSON)
+        var jsonName= '{"name": "Tom"}';
+        var jsObject = JSON.parse(jsonName);
+    -- Convert JS to JSON: JSON.stringify(JSObject)
+
+    * Buffer
+
+    Transferring, Generating compressed files, dynamic images,sending serialized binary data.
+    -- Binary data in buffers is stored as a series of octets or a sequence of eight 0s and 1s that can be a hexadecimal value of 0X00 to 0xFF
+    -- Create: new Buffer (sizeInBytes / octetArray / string, [encoding])
+    -- Write Buffer: fill / write / writeInt8, writeInt16LR ...
+    -- Read: toString / write / []/ readInt8 / readInt16LE / readInt16BE ...
+    -- Length
+    -- Copy
+    -- Slicing
+    -- Concatenate
+
+    * Stream
+
+    Streams are memory structures that are readable, writable or both. Streams is used to transfer data from one location to another.
+
+    -- Readable Streams: is designed to provide mechanism to easily read data coming into an application from another source. Some common example:
+        HTTP responses on client
+        HTTP requests on server
+        fs read streams
+        zli streams
+        crypto stream
+        TCP socket
+        Child processes stdout and stderr
+        process.stdin
+
+    -- Writable Streams:
+        HTTP requests on client
+        HTTP responses on the server
+        fs write streams
+        zlib streams
+        crypto streams
+        TCP sockets
+        Child process stdin
+        process.stdout and process.stderr
+
+    -- Dublex Streams is a stream that combines Readable and Writable functionality.
+
+    -- Transform Streams
+        Is extends the Duplex Stream but modifies the data between the Writable and Readable stream. Some examples of Transform streams are: zlib and crypto streams.
+
+    -- Piping Readable and Writable Streams
+
+    -- Compressing and Decompressing Data with Zlib
+
+    -- Compressing and Decompressing Buffers
+
+    * File System from Node.js
+
+    -- Synchronous vs Asynchronous fs calls
+        Synchronous fs calls block until a call completes and then control is released back tho the thread. Need to use try / catch.
+
+        Asynchronous calls are placed on the event queue to be run later. This allows the calls to fit into the Node.js event model. Asynchronous need a callback function, automatically handle exceptions and pass an error object as first parameter if an exception occurs.
+
+    * HTTP services in Node.js
+
+    * Socket Service in Node.js
+
+    Sockets allow one process to communicate with another process through and IP address and port. It is useful for implementing interprocess communicate (IPC) for two difference processes running on the same server or accessing a service running on a completely difference server.
+    net module create both a socket server and clients connect to the socket server. tls to secure TLS socket servers and clients.
+
+
+Chapter 9: Scaling Application Using Multiple Processors in Node.js
+
+- Process module:
+- Process I/O Pipes
+- Process Signal

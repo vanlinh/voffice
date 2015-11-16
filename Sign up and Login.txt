@@ -1,0 +1,12 @@
+https://scotch.io/tutorials/easy-node-authentication-google
+
+1. Email & password
+
+
+2. oauth2 from Google
+
+ OAuth client
+ client ID
+ 15414574996-kcjgbj7onngdmv60rfo7i16fpn95mqkl.apps.googleusercontent.com
+ client secret
+ 6jlFkeDHg56mFQUy2coql5NJ

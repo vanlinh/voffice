@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="voffice">
+
+<head>
+    <title>vOffice Online</title>
+    <!-- Bootstrap CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/navbar.css"/>
+
+</head>
+
+<body>
+<div class="container-fluid">
+
+    <div class="nav navbar navbar-fixed-top">
+
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="#">vOffice</a>
+                <ul class="nav">
+                    <li><a ui-sref="office">Office</a></li>
+                    <li><a ui-sref="customers">Customers</a></li>
+                    <li><a ui-sref="bookkeeping">Bookkeeping</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div ui-view></div>
+    </div>
+</div>
+
+<!-- Angular -->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>-->
+<script src="../components/angular/angular.js"></script>
+
+<!-- UI-Router -->
+<script src="../components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<!--<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>-->
+<script src="js/app.js"></script>
+<script src="office/tasks/tasks.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
+
+<!-- App Script -->
+
+</body>
+
+</html>
